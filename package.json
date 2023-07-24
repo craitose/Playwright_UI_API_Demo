@@ -1,0 +1,14 @@
+{
+  "name": "playwrightapiframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {"tests:api": "playwright test --config=api.config.ts --project=Chromium",
+              "tests:e2e": "playwright test --config=playwright.config.ts --project=Chromium"},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.1"
+  }
+}
