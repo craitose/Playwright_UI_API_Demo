@@ -6,7 +6,7 @@ import { loginDetails,checkOutDetails } from "../../data";
 
 
 test("Swag Labs Online Store End to End", async ({ loginPage, productsPage, cartPage }) => {
-    //const loginPage = new LoginPage(page);
+
 
     await loginPage.login(loginDetails);
     await productsPage.sortProducts();

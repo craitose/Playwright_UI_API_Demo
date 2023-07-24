@@ -13,7 +13,7 @@ export class ProductsPage {
     //Locators
     
     menuButton = () => this.page.locator("#react-burger-menu-btn")
-    shopCartCount = () => this.page.locator('[class="shopping_cart_badge"]')
+    shopCartCount = () => this.page.locator('.shopping_cart_badge')
     shopCartButton = () => this.page.locator("#shopping_cart_container")
     filterButton = () => this.page.locator('[data-test="product_sort_container"]')
     firstItemPrice = () => this.page.locator('.inventory_item_price')
@@ -33,15 +33,13 @@ export class ProductsPage {
         let afterAddCount = await this.getcartCount()
 
         expect(afterAddCount).toBeGreaterThan(0)
-    
-        
         
     }
 
     public async getcartCount() {
         await this.shopCartCount().waitFor()
         const text = await this.shopCartCount().innerText()
-        console.warn({text})
+        
         return parseInt(text,10)
     
     }
@@ -58,7 +56,7 @@ export class ProductsPage {
         await this.filterButton().selectOption({"value":"lohi"})
         await this.firstItemPrice().first().waitFor()
         const firstPrice = await this.firstItemPrice().first().innerText()
-        console.warn({firstPrice})
+        
         expect(firstPrice).toBe("$7.99")    
 
     }
