@@ -4,7 +4,7 @@ export const loginDetails = {
 }
 
 export const checkOutDetails = {
-    firstname: "Craig",
-    lastname: "P",
+    firstname: "Crai",
+    lastname: "Tose",
     zipcode: "ZP23456"
 }
